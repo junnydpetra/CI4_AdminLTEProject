@@ -29,7 +29,7 @@
                         <h3 class="card-title">Dados de Cliente</h3>
                     </div>
                     
-                    <form>
+                    <form action="/cliente/store" method="post">
                         <div class="card-body">
                             
                             <div class="row">
@@ -68,8 +68,8 @@
                             </div>
 
                         </div>
-                        <div class="card-footer">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                        <div class="card-footer border-top border-dark">
+                            <button type="submit" class="btn btn-primary">Cadastrar</button>
                         </div>
                     </form>
 
