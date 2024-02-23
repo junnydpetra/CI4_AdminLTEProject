@@ -22,65 +22,63 @@
     <div class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+            <div class="col-lg-12">
+            
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Dados de Cliente</h3>
+                    </div>
+                    
+                    <form>
+                        <div class="card-body">
+                            
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="">Nome</label>
+                                        <input type="text" class="form-control" placeholder="Informe seu nome" name="nome">
+                                    </div>
+                                </div>
+                            
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label for="data_de_nascimento">Data de Nascimento</label>
+                                        <input type="date" class="form-control" placeholder="Informe seu nome" name="data_de_nascimento">
+                                    </div>
+                                </div>
+                            
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label for="telefone">Telefone</label>
+                                        <input type="text" class="form-control" placeholder="Informe seu nome" name="telefone">
+                                    </div>
+                                </div>
+                            </div>
 
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <label for="endereco">Endereço</label>
+                                    <input type="text" class="form-control" placeholder="Endereço" name="endereco">
+                                </div>
+                                
+                                <div class="col-lg-4">
+                                    <label for="limite_de_credito">Limite de Crédito</label>
+                                    <input type="text" class="form-control" placeholder="Limite disponível" name="limite_de_credito">
+                                </div>                                
+                            </div>
 
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+
+                </div>
             </div>
-
-            <div class="card card-primary card-outline">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div><!-- /.card -->
-          </div>
-          <!-- /.col-md-6 -->
-          <div class="col-lg-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="m-0">Featured</h5>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">Special title treatment</h6>
-
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-
-            <div class="card card-primary card-outline">
-              <div class="card-header">
-                <h5 class="m-0">Featured</h5>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">Special title treatment</h6>
-
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <!-- /.col-md-6 -->
         </div>
         <!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
-  </div>
+</div>
   <!-- /.content-wrapper -->
