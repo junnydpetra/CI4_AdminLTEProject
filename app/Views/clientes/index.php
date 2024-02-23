@@ -26,7 +26,12 @@
                 <div class="card">
                     
                     <div class="card-header">
-                        <h3 class="card-title">Registros</h3>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <h3 class="card-title col-lg-1 align-middle font-weight-bold">Registros</h3>
+                                <button class="col-lg-1 offset-lg-10 btn btn-sm btn-success border border-dark"><a href="<?php echo base_url('/clientes/new') ?>" class="text-decoration-none text-white">Novo</a></button>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="card-body">
@@ -65,13 +70,10 @@
                             <li class="page-item"><a class="page-link" href="#">»</a></li>
                         </ul>
                     </div>
-
                 </div>
+                
             </div>
         </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
+      </div>
     </div>
-    <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
