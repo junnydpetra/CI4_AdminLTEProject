@@ -3,3 +3,12 @@ in SYSTEMPATH\CodeIgniter.php on line 226.
  1 SYSTEMPATH\CodeIgniter.php(226): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
  2 SYSTEMPATH\CodeIgniter.php(190): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
  3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-02-23 16:45:14 --> Invalid file: "templates/novo.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/novo.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/novo', [], true)
+ 3 APPPATH\Controllers\Cliente.php(12): view('templates/novo')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cliente->new()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

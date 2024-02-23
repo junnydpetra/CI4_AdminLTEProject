@@ -25,29 +25,20 @@ class Clientes extends Migration
                 'type'  => 'DATE',
             ],
             
-            'CPF'   => [
-                'type'  => 'VARCHAR',
-                'constraint'    => 11,
-            ],
-            
             'telefone'    => [
                 'type'      => 'VARCHAR',
-                'constraint'     => 11,
+                'constraint'     => 32,
             ],
             
             'endereco'    => [
                 'type'      => 'VARCHAR',
-                'constraint'     => 11,
+                'constraint'     => 128,
             ],
             
             'limite_de_credito'    => [
                 'type'      => 'DOUBLE',
             ],
             
-            'dia_de_pagamento'    => [
-                'type'      => 'INT',
-            ],
-             
             'created_at'    => [
                 'type'      => 'DATETIME',
             ],
@@ -64,9 +55,9 @@ class Clientes extends Migration
         $this->forge->addKey('id', true);
         $this->forge->createTable('clientes');
     }
-
+    
     public function down()
     {
-        //
+        $this->forge->dropTable('clientes');
     }
 }
