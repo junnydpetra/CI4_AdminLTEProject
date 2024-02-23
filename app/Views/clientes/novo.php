@@ -29,7 +29,7 @@
                         <h3 class="card-title">Dados de Cliente</h3>
                     </div>
                     
-                    <form action="/cliente/store" method="post">
+                    <form action="/clientes/store" method="post">
                         <div class="card-body">
                             
                             <div class="row">

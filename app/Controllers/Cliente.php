@@ -9,6 +9,17 @@ class Cliente extends BaseController
 {
     private $cliente_model;
     
+    public function index()
+    {
+        $clientes = $this->cliente_model->findAll();
+
+        $data['clientes'] = $clientes;
+        
+        echo view('templates/header');
+        echo view('clientes/index', $data);
+        echo view('templates/footer');
+    }
+
     function __construct()
     {
         $this->cliente_model = new ClienteModel();
@@ -27,6 +38,6 @@ class Cliente extends BaseController
 
         $this->cliente_model->insert($dados);
 
-        return redirect()->to('/cliente/new');
+        return redirect()->to('/clientes/new');
     }
 }
