@@ -35,6 +35,7 @@ $routes->get('/clientes', 'Cliente::index');
 $routes->get('/clientes/new', 'Cliente::new');
 $routes->get('/clientes/edit/(:num)', 'Cliente::edit/$1');
 $routes->get('/clientes/delete/(:num)', 'Cliente::delete/$1');
+$routes->get('/clientes/read/(:num)', 'Cliente::read/$1');
 
 $routes->post('/clientes/store', 'Cliente::store');
 

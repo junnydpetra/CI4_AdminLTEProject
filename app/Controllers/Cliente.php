@@ -74,4 +74,17 @@ class Cliente extends BaseController
 
         return redirect()->to("clientes");
     }
+
+    public function read($cliente_id)
+    {
+        $cliente = $this->cliente_model
+                         ->where('id', $cliente_id)
+                         ->first();
+
+        $data['cliente'] = $cliente;
+        
+        echo view('templates/header');
+        echo view('clientes/exibir', $data);
+        echo view('templates/footer');
+    }
 }
