@@ -38,6 +38,6 @@ class Cliente extends BaseController
 
         $this->cliente_model->insert($dados);
 
-        return redirect()->to('/clientes/new');
+        return redirect()->to('/clientes');
     }
 }

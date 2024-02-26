@@ -5,12 +5,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Starter Page</h1>
+            <h1 class="m-0">Cadastro de Cliente</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Starter Page</li>
+              <li class="breadcrumb-item"><a href="<?= base_url('inicio') ?>">Home</a></li>
+              <li class="breadcrumb-item active">Cadastro de Cliente</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -63,13 +63,16 @@
                                 
                                 <div class="col-lg-4">
                                     <label for="limite_de_credito">Limite de Crédito</label>
-                                    <input type="text" class="form-control" placeholder="Limite disponível" name="limite_de_credito">
+                                    <input id="number_format" type="text" class="form-control" placeholder="Limite disponível" name="limite_de_credito">
                                 </div>                                
                             </div>
 
                         </div>
                         <div class="card-footer border-top border-dark">
-                            <button type="submit" class="btn btn-primary">Cadastrar</button>
+                            <div class="row justify-content-between">
+                                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                                <a href="javascript:history.back()" class="btn btn-danger">Voltar</a>
+                            </div>
                         </div>
                     </form>
 

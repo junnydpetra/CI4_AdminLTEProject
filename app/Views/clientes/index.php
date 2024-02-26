@@ -54,7 +54,7 @@
                                         <td><?= $cliente['data_de_nascimento'] ?></td>
                                         <td><?= $cliente['telefone'] ?></td>
                                         <td><?= $cliente['endereco'] ?></td>
-                                        <td><?= $cliente['limite_de_credito'] ?></td>
+                                        <td><?= number_format($cliente['limite_de_credito'], 2, ',', '.') ?></td>
                                     </tr>
                                <?php endforeach; ?>
                             </tbody>
@@ -77,3 +77,5 @@
       </div>
     </div>
   </div>
+  
+  <script src="<?php echo base_url('assets/scripts/jquery_mask.js') ?>"></script>
