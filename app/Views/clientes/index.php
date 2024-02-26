@@ -10,7 +10,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?php echo base_url('/inicio')?>">Home</a></li>
-              <li class="breadcrumb-item active">Starter Page</li>
+              <li class="breadcrumb-item active">Cadastro de Clientes</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -44,6 +44,7 @@
                                     <th>Telefone</th>
                                     <th>Endereço</th>
                                     <th>Limite de Crédito</th>
+                                    <th>Opções</th>
                                 </tr>
                             </thead>
                             <tbody>     
@@ -69,6 +70,7 @@
                             <li class="page-item"><a class="page-link" href="#">3</a></li>
                             <li class="page-item"><a class="page-link" href="#">»</a></li>
                         </ul>
+                        <a href="javascript:history.back()" class="btn btn-danger">Voltar</a>
                     </div>
                 </div>
                 
