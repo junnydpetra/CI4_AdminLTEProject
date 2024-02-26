@@ -8,6 +8,11 @@ use App\Controllers\BaseController;
 class Cliente extends BaseController
 {
     private $cliente_model;
+
+    function __construct()
+    {
+        $this->cliente_model = new ClienteModel();
+    }
     
     public function index()
     {
@@ -20,11 +25,6 @@ class Cliente extends BaseController
         echo view('templates/footer');
     }
 
-    function __construct()
-    {
-        $this->cliente_model = new ClienteModel();
-    }
-
     public function new()
     {
         echo view('templates/header');
@@ -32,18 +32,38 @@ class Cliente extends BaseController
         echo view('templates/footer');
     }
 
+    public function edit($cliente_id)
+    {
+        $cliente = $this->cliente_model
+                        ->where('id', $cliente_id)
+                        ->first();
+
+        $data['cliente'] = $cliente;
+
+        echo view('templates/header');
+        echo view('clientes/editar', $data);
+        echo view('templates/footer');
+    }
+
     public function store()
     {
         $dados = $this->request->getVar();
+        // dd($dados);
+
+        if (isset($dados['cliente_id'])):
+
+            $this->cliente_model
+                 ->where('id', $dados['cliente_id'])
+                 ->set($dados)
+                 ->update();
+
+            return redirect()->to("clientes");
+
+        endif;
 
         $this->cliente_model->insert($dados);
 
         return redirect()->to('/clientes');
-    }
-
-    public function edit($cliente_id)
-    {
-        echo $cliente_id;
     }
 
     public function delete($cliente_id)

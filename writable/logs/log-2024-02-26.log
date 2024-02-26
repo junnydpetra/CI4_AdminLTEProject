@@ -1,0 +1,213 @@
+CRITICAL - 2024-02-26 14:35:16 --> Invalid file: "clientes/edit.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('clientes/edit.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('clientes/edit', [], true)
+ 3 APPPATH\Controllers\Cliente.php(53): view('clientes/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cliente->edit('11')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-26 15:04:34 --> mysqli_sql_exception: Unknown column 'cliente_id' in 'where clause' in C:\xampp\htdocs\AdminLTEProject\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\AdminLTEProject\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `cliente...', 0)
+#1 C:\xampp\htdocs\AdminLTEProject\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `cliente...')
+#2 C:\xampp\htdocs\AdminLTEProject\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `cliente...')
+#3 C:\xampp\htdocs\AdminLTEProject\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `cliente...', Array, false)
+#4 C:\xampp\htdocs\AdminLTEProject\system\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\AdminLTEProject\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\AdminLTEProject\system\Model.php(755): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\AdminLTEProject\app\Controllers\Cliente.php(43): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\AdminLTEProject\system\CodeIgniter.php(934): App\Controllers\Cliente->store()
+#9 C:\xampp\htdocs\AdminLTEProject\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+#10 C:\xampp\htdocs\AdminLTEProject\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\AdminLTEProject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-26 15:04:34 --> Unknown column 'cliente_id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `clientes` SET `nome` = :nome:, `data_de_nascimento` = :data_de_nascimento:, `telefone` = :telefone:, `endereco` = :endereco:, `limite_de_credito` = :limite_de_credito:, `updated_at` = :updated_at:
+WHERE `cliente_id` = :cliente_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 4 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update(null, [...])
+ 5 APPPATH\Controllers\Cliente.php(43): CodeIgniter\Model->update()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cliente->store()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-26 16:48:00 --> Undefined array key "id"
+in APPPATH\Controllers\Cliente.php on line 41.
+ 1 APPPATH\Controllers\Cliente.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\Cliente.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cliente->store()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-26 16:48:21 --> mysqli_sql_exception: Unknown column 'cliente_id' in 'where clause' in C:\xampp\htdocs\AdminLTEProject\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\AdminLTEProject\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `cliente...', 0)
+#1 C:\xampp\htdocs\AdminLTEProject\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `cliente...')
+#2 C:\xampp\htdocs\AdminLTEProject\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `cliente...')
+#3 C:\xampp\htdocs\AdminLTEProject\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `cliente...', Array, false)
+#4 C:\xampp\htdocs\AdminLTEProject\system\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\AdminLTEProject\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\AdminLTEProject\system\Model.php(755): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\AdminLTEProject\app\Controllers\Cliente.php(43): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\AdminLTEProject\system\CodeIgniter.php(934): App\Controllers\Cliente->store()
+#9 C:\xampp\htdocs\AdminLTEProject\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+#10 C:\xampp\htdocs\AdminLTEProject\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\AdminLTEProject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-26 16:48:21 --> Unknown column 'cliente_id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `clientes` SET `nome` = :nome:, `data_de_nascimento` = :data_de_nascimento:, `telefone` = :telefone:, `endereco` = :endereco:, `limite_de_credito` = :limite_de_credito:, `updated_at` = :updated_at:
+WHERE `cliente_id` = :cliente_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 4 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update(null, [...])
+ 5 APPPATH\Controllers\Cliente.php(43): CodeIgniter\Model->update()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cliente->store()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-26 16:48:37 --> Undefined array key "id"
+in APPPATH\Controllers\Cliente.php on line 41.
+ 1 APPPATH\Controllers\Cliente.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\Cliente.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cliente->store()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-26 16:48:46 --> mysqli_sql_exception: Unknown column 'cliente_id' in 'where clause' in C:\xampp\htdocs\AdminLTEProject\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\AdminLTEProject\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `cliente...', 0)
+#1 C:\xampp\htdocs\AdminLTEProject\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `cliente...')
+#2 C:\xampp\htdocs\AdminLTEProject\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `cliente...')
+#3 C:\xampp\htdocs\AdminLTEProject\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `cliente...', Array, false)
+#4 C:\xampp\htdocs\AdminLTEProject\system\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\AdminLTEProject\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\AdminLTEProject\system\Model.php(755): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\AdminLTEProject\app\Controllers\Cliente.php(43): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\AdminLTEProject\system\CodeIgniter.php(934): App\Controllers\Cliente->store()
+#9 C:\xampp\htdocs\AdminLTEProject\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+#10 C:\xampp\htdocs\AdminLTEProject\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\AdminLTEProject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-26 16:48:46 --> Unknown column 'cliente_id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `clientes` SET `nome` = :nome:, `data_de_nascimento` = :data_de_nascimento:, `telefone` = :telefone:, `endereco` = :endereco:, `limite_de_credito` = :limite_de_credito:, `updated_at` = :updated_at:
+WHERE `cliente_id` = :cliente_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 4 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update(null, [...])
+ 5 APPPATH\Controllers\Cliente.php(43): CodeIgniter\Model->update()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cliente->store()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-26 17:02:09 --> Undefined array key "id"
+in APPPATH\Controllers\Cliente.php on line 42.
+ 1 APPPATH\Controllers\Cliente.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\Cliente.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cliente->store()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-26 17:03:24 --> Undefined array key "id"
+in APPPATH\Controllers\Cliente.php on line 42.
+ 1 APPPATH\Controllers\Cliente.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\Cliente.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cliente->store()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-26 17:03:38 --> mysqli_sql_exception: Unknown column 'cliente_id' in 'where clause' in C:\xampp\htdocs\AdminLTEProject\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\AdminLTEProject\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `cliente...', 0)
+#1 C:\xampp\htdocs\AdminLTEProject\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `cliente...')
+#2 C:\xampp\htdocs\AdminLTEProject\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `cliente...')
+#3 C:\xampp\htdocs\AdminLTEProject\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `cliente...', Array, false)
+#4 C:\xampp\htdocs\AdminLTEProject\system\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\AdminLTEProject\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\AdminLTEProject\system\Model.php(755): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\AdminLTEProject\app\Controllers\Cliente.php(44): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\AdminLTEProject\system\CodeIgniter.php(934): App\Controllers\Cliente->store()
+#9 C:\xampp\htdocs\AdminLTEProject\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+#10 C:\xampp\htdocs\AdminLTEProject\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\AdminLTEProject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-26 17:03:38 --> Unknown column 'cliente_id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `clientes` SET `nome` = :nome:, `data_de_nascimento` = :data_de_nascimento:, `telefone` = :telefone:, `endereco` = :endereco:, `limite_de_credito` = :limite_de_credito:, `updated_at` = :updated_at:
+WHERE `cliente_id` = :cliente_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 4 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update(null, [...])
+ 5 APPPATH\Controllers\Cliente.php(44): CodeIgniter\Model->update()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cliente->store()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-26 17:03:46 --> Undefined array key "cliente_id"
+in APPPATH\Views\clientes\editar.php on line 70.
+ 1 APPPATH\Views\clientes\editar.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cliente_id"', 'APPPATH\\Views\\clientes\\editar.php', 70)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\clientes\\editar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('clientes/editar', [], true)
+ 5 APPPATH\Controllers\Cliente.php(64): view('clientes/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cliente->edit('11')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-26 17:09:17 --> Cannot use [] for reading
+in APPPATH\Controllers\Cliente.php on line 53.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2024-02-26 17:16:21 --> mysqli_sql_exception: Unknown column 'cliente_id' in 'where clause' in C:\xampp\htdocs\AdminLTEProject\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\AdminLTEProject\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `cliente...', 0)
+#1 C:\xampp\htdocs\AdminLTEProject\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `cliente...')
+#2 C:\xampp\htdocs\AdminLTEProject\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `cliente...')
+#3 C:\xampp\htdocs\AdminLTEProject\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `cliente...', Array, false)
+#4 C:\xampp\htdocs\AdminLTEProject\system\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\AdminLTEProject\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\AdminLTEProject\system\Model.php(755): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\AdminLTEProject\app\Controllers\Cliente.php(58): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\AdminLTEProject\system\CodeIgniter.php(934): App\Controllers\Cliente->store()
+#9 C:\xampp\htdocs\AdminLTEProject\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+#10 C:\xampp\htdocs\AdminLTEProject\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\AdminLTEProject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-26 17:16:21 --> Unknown column 'cliente_id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `clientes` SET `nome` = :nome:, `data_de_nascimento` = :data_de_nascimento:, `telefone` = :telefone:, `endereco` = :endereco:, `limite_de_credito` = :limite_de_credito:, `updated_at` = :updated_at:
+WHERE `cliente_id` = :cliente_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 4 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update(null, [...])
+ 5 APPPATH\Controllers\Cliente.php(58): CodeIgniter\Model->update()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cliente->store()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-26 17:16:59 --> mysqli_sql_exception: Unknown column 'cliente_id' in 'where clause' in C:\xampp\htdocs\AdminLTEProject\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\AdminLTEProject\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `cliente...', 0)
+#1 C:\xampp\htdocs\AdminLTEProject\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `cliente...')
+#2 C:\xampp\htdocs\AdminLTEProject\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `cliente...')
+#3 C:\xampp\htdocs\AdminLTEProject\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `cliente...', Array, false)
+#4 C:\xampp\htdocs\AdminLTEProject\system\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\AdminLTEProject\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\AdminLTEProject\system\Model.php(755): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\AdminLTEProject\app\Controllers\Cliente.php(58): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\AdminLTEProject\system\CodeIgniter.php(934): App\Controllers\Cliente->store()
+#9 C:\xampp\htdocs\AdminLTEProject\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+#10 C:\xampp\htdocs\AdminLTEProject\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\AdminLTEProject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-26 17:16:59 --> Unknown column 'cliente_id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `clientes` SET `nome` = :nome:, `data_de_nascimento` = :data_de_nascimento:, `telefone` = :telefone:, `endereco` = :endereco:, `limite_de_credito` = :limite_de_credito:, `updated_at` = :updated_at:
+WHERE `cliente_id` = :cliente_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 4 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update(null, [...])
+ 5 APPPATH\Controllers\Cliente.php(58): CodeIgniter\Model->update()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cliente->store()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
