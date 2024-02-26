@@ -44,7 +44,7 @@
                                     <th>Telefone</th>
                                     <th>Endereço</th>
                                     <th>Limite de Crédito</th>
-                                    <th>Opções</th>
+                                    <th class="text-center">Opções</th>
                                 </tr>
                             </thead>
                             <tbody>     
@@ -56,6 +56,10 @@
                                         <td><?= $cliente['telefone'] ?></td>
                                         <td><?= $cliente['endereco'] ?></td>
                                         <td><?= number_format($cliente['limite_de_credito'], 2, ',', '.') ?></td>
+                                        <td class="text-center">
+                                            <a href="<?= base_url("clientes/edit/{$cliente['id']}") ?>" class="btn-sm btn-warning">Editar</a>
+                                            <a href="<?= base_url("clientes/delete/{$cliente['id']}") ?>" class="btn-sm btn-danger">Excluir</a>
+                                        </td>
                                     </tr>
                                <?php endforeach; ?>
                             </tbody>
@@ -70,7 +74,7 @@
                             <li class="page-item"><a class="page-link" href="#">3</a></li>
                             <li class="page-item"><a class="page-link" href="#">»</a></li>
                         </ul>
-                        <a href="javascript:history.back()" class="btn btn-danger">Voltar</a>
+                        <a href="javascript:history.back()" class="btn btn-primary">Voltar</a>
                     </div>
                 </div>
                 

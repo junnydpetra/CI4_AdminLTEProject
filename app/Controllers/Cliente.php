@@ -40,4 +40,14 @@ class Cliente extends BaseController
 
         return redirect()->to('/clientes');
     }
+
+    public function edit($cliente_id)
+    {
+        echo $cliente_id;
+    }
+
+    public function delete($cliente_id)
+    {
+        echo $cliente_id;
+    }
 }
