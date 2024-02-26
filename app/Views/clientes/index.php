@@ -58,7 +58,7 @@
                                         <td><?= number_format($cliente['limite_de_credito'], 2, ',', '.') ?></td>
                                         <td class="text-center">
                                             <a href="<?= base_url("clientes/edit/{$cliente['id']}") ?>" class="btn-sm btn-warning">Editar</a>
-                                            <a href="<?= base_url("clientes/delete/{$cliente['id']}") ?>" class="btn-sm btn-danger">Excluir</a>
+                                            <a href="<?= base_url("clientes/delete/{$cliente['id']}") ?>" class="btn-sm btn-danger" onclick="return confirm('Deseja realmente excluir este registro?')">Excluir</a>
                                         </td>
                                     </tr>
                                <?php endforeach; ?>

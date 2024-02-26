@@ -68,6 +68,10 @@ class Cliente extends BaseController
 
     public function delete($cliente_id)
     {
-        echo $cliente_id;
+        $this->cliente_model
+             ->where('id', $cliente_id)
+             ->delete();
+
+        return redirect()->to("clientes");
     }
 }
