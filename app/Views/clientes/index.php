@@ -1,3 +1,23 @@
+<div class="modal fade" id="modal-delete-confirm">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Default Modal</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer justify-content-between">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -59,7 +79,7 @@
                                         <td class="text-center">
                                           <a href="<?= base_url("clientes/read/{$cliente['id']}") ?>" class="btn-sm btn-primary">Exibir</a>
                                             <a href="<?= base_url("clientes/edit/{$cliente['id']}") ?>" class="btn-sm btn-warning">Editar</a>
-                                            <a href="<?= base_url("clientes/delete/{$cliente['id']}") ?>" class="btn-sm btn-danger" onclick="return confirm('Deseja realmente excluir este registro?')">Excluir</a>
+                                            <a href="<?= base_url("clientes/delete/{$cliente['id']}") ?>" class="btn-sm btn-danger" data-toggle="modal" data-target="#modal-delete-confirm">Excluir</a>
                                         </td>
                                     </tr>
                                <?php endforeach; ?>
