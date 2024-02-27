@@ -144,15 +144,4 @@
   </div>
   
   <script src="<?php echo base_url('assets/scripts/jquery_mask.js') ?>"></script>
-
-  <script>
-    var alertSuccess = document.querySelector('.alert-success');
-
-    if (document.querySelector('.alert')) 
-    {
-      setTimeout(() => {
-          document.querySelector('.alert').remove();
-      }, 2500);
-    }
-
-  </script>
+  <script src="<?= base_url('assets/scripts/alert_timer.js') ?>"></script>
