@@ -1,19 +1,22 @@
 <div class="modal fade" id="modal-delete-confirm">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Default Modal</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-      </div>
-      <div class="modal-body">
-        <p>One fine body&hellip;</p>
-      </div>
-      <div class="modal-footer justify-content-between">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+      <form action="clientes/delete"> 
+        <div class="modal-header">
+          <h4 class="modal-title">Confirmar</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Tem certeza de que deseja excluir registro de cliente?</p>
+          <input type="hidden" id="cliente_id" name="cliente_id">
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Excluir</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
@@ -41,6 +44,14 @@
     <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-12">
+            <div class="alert alert-success alert-dismissible"> 
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button> 
+              <i class="icon fas fa-check"></i>Cliente cadastrado com sucesso! 
+            </div>
+          </div>
+        </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
@@ -77,9 +88,9 @@
                                         <td><?= $cliente['endereco'] ?></td>
                                         <td><?= number_format($cliente['limite_de_credito'], 2, ',', '.') ?></td>
                                         <td class="text-center">
-                                          <a href="<?= base_url("clientes/read/{$cliente['id']}") ?>" class="btn-sm btn-primary">Exibir</a>
-                                            <a href="<?= base_url("clientes/edit/{$cliente['id']}") ?>" class="btn-sm btn-warning">Editar</a>
-                                            <a href="<?= base_url("clientes/delete/{$cliente['id']}") ?>" class="btn-sm btn-danger" data-toggle="modal" data-target="#modal-delete-confirm">Excluir</a>
+                                          <a type="button" href="<?= base_url("clientes/read/{$cliente['id']}") ?>" class="btn-sm btn-primary">Exibir</a>
+                                            <a type="button" href="<?= base_url("clientes/edit/{$cliente['id']}") ?>" class="btn-sm btn-warning">Editar</a>
+                                            <a href="<?= base_url("clientes/delete/{$cliente['id']}") ?>" type="button" class="btn-sm btn-danger">Excluir</a>
                                         </td>
                                     </tr>
                                <?php endforeach; ?>
