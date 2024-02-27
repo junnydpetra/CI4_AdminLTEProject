@@ -75,8 +75,8 @@
                         
                         <div class="card-footer border-top border-dark">
                             <div class="row justify-content-between">
-                                <button type="submit" class="btn btn-primary">Atualizar</button>
-                                <a href="javascript:history.back()" class="btn btn-danger">Voltar</a>
+                            <button type="submit" class="btn btn-primary" title="salvar"><i class="fas fa-save"></i></button>
+                                <a href="javascript:history.back()" class="btn btn-danger" title="voltar"><i class="fas fa-arrow-left"></i></a>
                             </div>
                         </div>
                     </form>

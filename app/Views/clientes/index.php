@@ -33,7 +33,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?php echo base_url('/inicio')?>">Home</a></li>
-              <li class="breadcrumb-item active">Cadastro de Clientes</li>
+              <li class="breadcrumb-item active">Registro de Clientes</li>
             </ol>
           </div>
         </div>
@@ -115,7 +115,7 @@
                                         <td class="text-center">
                                           <a href="<?= base_url("clientes/read/{$cliente['id']}") ?>" class="btn-sm btn-primary" title="exibir registro"><i class="fas fa-eye"></i></a>
                                           <a href="<?= base_url("clientes/edit/{$cliente['id']}") ?>" class="btn-sm btn-warning" title="editar registro"><i class="fas fa-pen"></i></a>
-                                          <a href="<?= base_url("clientes/delete/{$cliente['id']}") ?>" class="btn-sm btn-danger" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" title="excluir registro"><i class="fas fa-trash"></i></a>
+                                          <a href="<?= base_url("clientes/delete/{$cliente['id']}") ?>" class="btn-sm btn-danger" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" title="excluir registro"><i class="fas fa-trash-alt"></i></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
@@ -148,10 +148,11 @@
   <script>
     var alertSuccess = document.querySelector('.alert-success');
 
-    if (alertSuccess) {
- 
-    setTimeout(function() {
-      alertSuccess.style.display = 'none';
-    }, 5000);
-}
+    if (document.querySelector('.alert')) 
+    {
+      setTimeout(() => {
+          document.querySelector('.alert').remove();
+      }, 2500);
+    }
+
   </script>

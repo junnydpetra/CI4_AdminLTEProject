@@ -67,7 +67,7 @@
 
                     <div class="card-footer border-top border-dark">
                         <div class="row justify-content-end">
-                            <a href="javascript:history.back()" class="btn btn-primary">Voltar</a>
+                            <a href="javascript:history.back()" class="btn btn-primary" title="voltar"><i class="fas fa-arrow-left"></i></a>
                         </div>
                     </div>
 
