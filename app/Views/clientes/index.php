@@ -21,37 +21,59 @@
   </div>
 </div>
 
-<!-- Content Wrapper. Contains page content -->
+
 <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
+    
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0">Clientes</h1>
-          </div><!-- /.col -->
+          </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?php echo base_url('/inicio')?>">Home</a></li>
               <li class="breadcrumb-item active">Cadastro de Clientes</li>
             </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
-
-    <!-- Main content -->
-    <div class="content">
-      <div class="container-fluid">
-      <div class="row">
-          <div class="col-lg-12">
-            <div class="alert alert-success alert-dismissible"> 
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button> 
-              <i class="icon fas fa-check"></i>Cliente cadastrado com sucesso! 
-            </div>
           </div>
         </div>
+      </div>
+    </div>
+    
+    <div class="content">
+      <div class="container-fluid">
+        
+        <?php
+          $session = session();
+          $alert = $session->get('alert');
+        ?>
+        <?php if(isset($alert) && $alert == 'success_create'): ?>
+          
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="alert alert-success alert-dismissible"> 
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button> 
+                <i class="icon fas fa-check"></i>Cliente cadastrado com sucesso! 
+              </div>
+            </div>
+          </div>
+        
+        <?php elseif(isset($alert) && $alert == 'success_delete'): ?>
+          
+          <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <i class="icon fas fa-ban"></i>Registro excluído com sucesso!
+          </div>
+          
+        <?php elseif(isset($alert) && $alert == 'success_update'): ?>
+
+          <div class="alert alert-info alert-dismissible"> 
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <i class="icon fas fa-check"></i>Registro atualizado com sucesso!
+          </div>
+
+        <?php endif; ?>
+        
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
@@ -60,7 +82,9 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <h3 class="card-title col-lg-1 align-middle font-weight-bold">Registros</h3>
-                                <button class="col-lg-1 offset-lg-10 btn btn-sm btn-success border border-dark"><a href="<?php echo base_url('/clientes/new') ?>" class="text-decoration-none text-white">Novo</a></button>
+                                <a href="<?= base_url('/clientes/new') ?>" class="col-lg-1 offset-lg-10 btn btn-sm btn-success border border-dark p-1" title="Adicionar usuário">
+                                  <i class="fas fa-user-plus"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -78,8 +102,9 @@
                                     <th class="text-center">Opções</th>
                                 </tr>
                             </thead>
-                            <tbody>     
-                               <?php foreach ($clientes as $key => $cliente): ?>
+                            <tbody>
+                              <?php if(!empty($clientes)): ?>
+                                <?php foreach ($clientes as $key => $cliente): ?>
                                     <tr>
                                         <td class="text-center"><?= $cliente['id'] ?></td>
                                         <td><?= $cliente['nome'] ?></td>
@@ -88,12 +113,15 @@
                                         <td><?= $cliente['endereco'] ?></td>
                                         <td><?= number_format($cliente['limite_de_credito'], 2, ',', '.') ?></td>
                                         <td class="text-center">
-                                          <a type="button" href="<?= base_url("clientes/read/{$cliente['id']}") ?>" class="btn-sm btn-primary">Exibir</a>
-                                            <a type="button" href="<?= base_url("clientes/edit/{$cliente['id']}") ?>" class="btn-sm btn-warning">Editar</a>
-                                            <a href="<?= base_url("clientes/delete/{$cliente['id']}") ?>" type="button" class="btn-sm btn-danger">Excluir</a>
+                                          <a href="<?= base_url("clientes/read/{$cliente['id']}") ?>" class="btn-sm btn-primary" title="exibir registro"><i class="fas fa-eye"></i></a>
+                                          <a href="<?= base_url("clientes/edit/{$cliente['id']}") ?>" class="btn-sm btn-warning" title="editar registro"><i class="fas fa-pen"></i></a>
+                                          <a href="<?= base_url("clientes/delete/{$cliente['id']}") ?>" class="btn-sm btn-danger" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" title="excluir registro"><i class="fas fa-trash"></i></a>
                                         </td>
                                     </tr>
-                               <?php endforeach; ?>
+                                <?php endforeach; ?>
+                              <?php else: ?>
+                                  <td colspan="7" class="text-center text-danger">Nenhum cliente cadastrado!</td>
+                              <?php endif; ?> 
                             </tbody>
                         </table>
                     </div>
@@ -116,3 +144,14 @@
   </div>
   
   <script src="<?php echo base_url('assets/scripts/jquery_mask.js') ?>"></script>
+
+  <script>
+    var alertSuccess = document.querySelector('.alert-success');
+
+    if (alertSuccess) {
+ 
+    setTimeout(function() {
+      alertSuccess.style.display = 'none';
+    }, 5000);
+}
+  </script>

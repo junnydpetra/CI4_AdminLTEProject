@@ -48,7 +48,6 @@ class Cliente extends BaseController
     public function store()
     {
         $dados = $this->request->getVar();
-        // dd($dados);
 
         if (isset($dados['cliente_id'])):
 
@@ -57,11 +56,17 @@ class Cliente extends BaseController
                  ->set($dados)
                  ->update();
 
+            $session = session();
+            $session->setFlashdata('alert', 'success_update');
+
             return redirect()->to("clientes");
 
         endif;
 
         $this->cliente_model->insert($dados);
+        
+        $session = session();
+        $session->setFlashdata('alert', 'success_create');
 
         return redirect()->to('/clientes');
     }
@@ -71,6 +76,9 @@ class Cliente extends BaseController
         $this->cliente_model
              ->where('id', $cliente_id)
              ->delete();
+
+        $session = session();
+        $session->setFlashdata('alert', 'success_delete');
 
         return redirect()->to("clientes");
     }
