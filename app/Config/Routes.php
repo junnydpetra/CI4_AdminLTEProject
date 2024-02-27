@@ -34,12 +34,10 @@ $routes->get('/inicio', 'Inicio::index');
 $routes->get('/clientes', 'Cliente::index');
 $routes->get('/clientes/new', 'Cliente::new');
 $routes->get('/clientes/edit/(:num)', 'Cliente::edit/$1');
-// $routes->get('/clientes/delete/(:num)', 'Cliente::delete/$1');
 $routes->get('/clientes/read/(:num)', 'Cliente::read/$1');
+$routes->get('/funcionarios', 'Funcionarios::index');
 
 $routes->post('/clientes/store', 'Cliente::store');
-// $routes->match(['post', 'delete'], '/clientes/delete/(:num)', 'Cliente::delete/$1');
-// $routes->post('/clientes/delete/(:num)', 'Cliente::delete/$1');
 $routes->add('clientes/delete/(:num)', 'Cliente::delete/$1', ['as' => 'delete_cliente']);
 
 /*
