@@ -82,7 +82,7 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <h3 class="card-title col-lg-1 align-middle font-weight-bold">Registros</h3>
-                                <a href="<?= base_url('/funcionarios/new') ?>" class="col-lg-1 offset-lg-10 btn btn-sm btn-success border border-dark p-1" title="Adicionar usuário">
+                                <a href="<?= base_url('/funcionarios/new') ?>" class="col-lg-1 offset-lg-10 btn btn-sm btn-success border border-dark p-1" title="Adicionar funcionário">
                                   <i class="fas fa-user-plus"></i>
                                 </a>
                             </div>
@@ -93,34 +93,44 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="width: 10px">Registro</th>
-                                    <th>Nome</th>
-                                    <th>Data de Nascimento</th>
-                                    <th>Telefone</th>
-                                    <th>Endereço</th>
-                                    <th>Limite de Crédito</th>
-                                    <th class="text-center">Opções</th>
+                                    <th style="width: 10px" class="align-middle">Registro</th>
+                                    <th class="align-middle text-center">Nome</th>
+                                    <th class="align-middle text-center">Nascimento</th>
+                                    <th class="align-middle text-center">RG</th>
+                                    <th class="align-middle text-center">CPF</th>
+                                    <th class="align-middle text-center">Telefone</th>
+                                    <th class="align-middle text-center">Endereço</th>
+                                    <!-- <th class="align-middle text-center">Contratação</th> -->
+                                    <th class="align-middle text-center">Cargo</th>
+                                    <th class="align-middle text-center">Salário</th>
+                                    <!-- <th class="align-middle text-center">Data do Pagamento</th> -->
+                                    <th class="align-middle text-center" class="text-center">Opções</th>
                                 </tr>
                             </thead>
                             <tbody>
                               <?php if(!empty($funcionarios)): ?>
-                                <?php foreach ($funcionarios as $key => $funcionario): ?>
-                                    <tr>
-                                        <td class="text-center"><?= $funcionario['id'] ?></td>
-                                        <td><?= $funcionario['nome'] ?></td>
-                                        <td><?= $funcionario['data_de_nascimento'] ?></td>
-                                        <td><?= $funcionario['telefone'] ?></td>
-                                        <td><?= $funcionario['endereco'] ?></td>
-                                        <td><?= number_format($funcionario['limite_de_credito'], 2, ',', '.') ?></td>
-                                        <td class="text-center">
-                                          <a href="<?= base_url("funcionarios/read/{$funcionario['id']}") ?>" class="btn-sm btn-primary" title="exibir registro"><i class="fas fa-eye"></i></a>
-                                          <a href="<?= base_url("funcionarios/edit/{$funcionario['id']}") ?>" class="btn-sm btn-warning" title="editar registro"><i class="fas fa-pen"></i></a>
-                                          <a href="<?= base_url("funcionarios/delete/{$funcionario['id']}") ?>" class="btn-sm btn-danger" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" title="excluir registro"><i class="fas fa-trash-alt"></i></a>
-                                        </td>
-                                    </tr>
-                                <?php endforeach; ?>
+                                  <?php foreach ($funcionarios as $key => $funcionario): ?>
+                                      <tr>
+                                          <td class="text-center"><?= $funcionario['id'] ?></td>
+                                          <td><?= $funcionario['nome'] ?></td>
+                                          <td><?= date('d/m/Y', strtotime($funcionario['data_de_nascimento'])) ?></td>
+                                          <td><?= $funcionario['rg'] ?></td>
+                                          <td><?= substr($funcionario['cpf'], 0, 3) ?>.<?= substr($funcionario['cpf'], 3, 3) ?>.<?= substr($funcionario['cpf'], 6, 3) ?>-<?= substr($funcionario['cpf'], 9, 2) ?></td>
+                                          <td><?= $funcionario['telefone'] ?></td>
+                                          <td><?= $funcionario['endereco'] ?></td>
+                                          <!-- <td><?= $funcionario['data_de_contratacao'] ?></td> -->
+                                          <td><?= $funcionario['cargo'] ?></td>
+                                          <td><?= number_format($funcionario['salario'], 2, ',', '.') ?></td>
+                                          <!-- <td><?= $funcionario['dia_do_pagamento'] ?></td> -->
+                                          <td class="text-center">
+                                            <a href="<?= base_url("funcionarios/read/{$funcionario['id']}") ?>" class="btn-sm btn-primary" title="exibir registro"><i class="fas fa-eye"></i></a>
+                                            <a href="<?= base_url("funcionarios/edit/{$funcionario['id']}") ?>" class="btn-sm btn-warning" title="editar registro"><i class="fas fa-pen"></i></a>
+                                            <a href="<?= base_url("funcionarios/delete/{$funcionario['id']}") ?>" class="btn-sm btn-danger" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" title="excluir registro"><i class="fas fa-trash-alt"></i></a>
+                                          </td>
+                                      </tr>
+                                  <?php endforeach; ?>
                               <?php else: ?>
-                                  <td colspan="7" class="text-center text-danger">Nenhum funcionario cadastrado!</td>
+                                  <td colspan="12" class="text-center text-danger">Nenhum funcionario cadastrado!</td>
                               <?php endif; ?> 
                             </tbody>
                         </table>

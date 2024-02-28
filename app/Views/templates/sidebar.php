@@ -40,6 +40,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="<?= base_url('funcionarios'); ?>" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Registros de Funcionários
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
