@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class ProdutoModel extends Model
 {
-    protected $table = 'funcionarios';
+    protected $table = 'produtos';
     protected $primaryKey = 'id';
     protected $allowedFields = [
         'id',

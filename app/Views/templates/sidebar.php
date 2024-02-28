@@ -48,6 +48,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="<?= base_url('produtos'); ?>" class="nav-link">
+              <i class="nav-icon fas fa-boxes"></i>
+              <p>
+                Registros de Produtos
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

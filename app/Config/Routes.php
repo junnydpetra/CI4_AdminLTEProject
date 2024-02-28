@@ -45,13 +45,21 @@ $routes->add('/clientes/delete/(:num)', 'Cliente::delete/$1', ['as' => 'delete_c
 
 /* Funcionários */
 $routes->get('/funcionarios', 'Funcionario::index');
-$routes->get('/funcionario', 'Funcionario::index');
 $routes->get('/funcionarios/new', 'Funcionario::new');
 $routes->get('/funcionarios/edit/(:num)', 'Funcionario::edit/$1');
 $routes->get('/funcionarios/read/(:num)', 'Funcionario::read/$1');
 
 $routes->post('/funcionarios/store', 'Funcionario::store');
 $routes->add('funcionarios/delete/(:num)', 'Funcionario::delete/$1', ['as' => 'delete_funcionario']);
+
+/* Produtos */
+$routes->get('/produtos', 'Produto::index');
+$routes->get('/produtos/new', 'Produto::new');
+$routes->get('/produtos/edit/(:num)', 'Produto::edit/$1');
+$routes->get('/produtos/read/(:num)', 'Produto::read/$1');
+
+$routes->post('/produtos/store', 'Produto::store');
+$routes->add('produtos/delete/(:num)', 'Produto::delete/$1', ['as' => 'delete_produto']);
 
 /*
  * --------------------------------------------------------------------
