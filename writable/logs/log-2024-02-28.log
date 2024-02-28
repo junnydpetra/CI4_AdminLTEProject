@@ -69,3 +69,244 @@ INFO - 2024-02-28 13:30:54 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-02-28 13:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-02-28 13:31:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-02-28 13:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 13:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 13:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 13:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 13:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 13:50:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 13:51:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 13:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 13:52:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:02:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:02:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:03:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:03:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:05:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:06:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:07:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:09:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:14:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:15:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:15:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:20:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-28 14:20:19 --> Invalid file: "funcionarios/editar.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('funcionarios/editar.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('funcionarios/editar', [], true)
+ 3 APPPATH\Controllers\Funcionario.php(69): view('funcionarios/editar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionario->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionario))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-28 14:20:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-28 14:20:37 --> Invalid file: "funcionarios/editar.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('funcionarios/editar.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('funcionarios/editar', [], true)
+ 3 APPPATH\Controllers\Funcionario.php(69): view('funcionarios/editar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionario->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionario))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-28 14:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-28 14:31:55 --> Invalid file: "funcionarios/editar.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('funcionarios/editar.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('funcionarios/editar', [], true)
+ 3 APPPATH\Controllers\Funcionario.php(69): view('funcionarios/editar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionario->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionario))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 14:32:19 --> Trying to access array offset on value of type null
+in APPPATH\Views\clientes\editar.php on line 42.
+ 1 APPPATH\Views\clientes\editar.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\clientes\\editar.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\clientes\\editar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('clientes/editar', [], true)
+ 5 APPPATH\Controllers\Cliente.php(44): view('clientes/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Cliente->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-28 14:45:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:45:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-28 14:45:45 --> Invalid file: "funcionarios/editar.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('funcionarios/editar.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('funcionarios/editar', [], true)
+ 3 APPPATH\Controllers\Funcionario.php(69): view('funcionarios/editar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionario->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionario))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 14:46:32 --> Invalid file: "funcionarios/editar.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('funcionarios/editar.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('funcionarios/editar', [], true)
+ 3 APPPATH\Controllers\Funcionario.php(69): view('funcionarios/editar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionario->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionario))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-28 14:52:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:52:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:55:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:55:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:56:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:56:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 14:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 16:45:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 16:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-28 16:46:19 --> Undefined array key "nonme"
+in APPPATH\Views\funcionarios\editar.php on line 35.
+ 1 APPPATH\Views\funcionarios\editar.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nonme"', 'APPPATH\\Views\\funcionarios\\editar.php', 35)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\funcionarios\\editar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('funcionarios/editar', [], true)
+ 5 APPPATH\Controllers\Funcionario.php(69): view('funcionarios/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionario->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-28 16:46:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 16:46:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 16:46:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 16:46:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 16:48:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 16:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 16:50:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 16:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 16:51:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 16:51:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 16:56:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 16:56:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 16:56:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 16:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 16:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 16:57:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 16:57:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 16:59:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-28 16:59:17 --> Undefined array key "limite_de_credito"
+in APPPATH\Views\clientes\exibir.php on line 62.
+ 1 APPPATH\Views\clientes\exibir.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "limite_de_credito"', 'APPPATH\\Views\\clientes\\exibir.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\clientes\\exibir.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('clientes/exibir', [], true)
+ 5 APPPATH\Controllers\Funcionario.php(94): view('clientes/exibir', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionario->read('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:00:00 --> Undefined array key "limite_de_credito"
+in APPPATH\Views\clientes\exibir.php on line 62.
+ 1 APPPATH\Views\clientes\exibir.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "limite_de_credito"', 'APPPATH\\Views\\clientes\\exibir.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\clientes\\exibir.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('clientes/exibir', [], true)
+ 5 APPPATH\Controllers\Funcionario.php(94): view('clientes/exibir', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionario->read('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-28 17:00:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 17:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 17:00:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-28 17:00:57 --> Undefined array key "limite_de_credito"
+in APPPATH\Views\clientes\exibir.php on line 62.
+ 1 APPPATH\Views\clientes\exibir.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "limite_de_credito"', 'APPPATH\\Views\\clientes\\exibir.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\clientes\\exibir.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('clientes/exibir', [], true)
+ 5 APPPATH\Controllers\Funcionario.php(94): view('clientes/exibir', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionario->read('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:01:46 --> Undefined variable $cliente
+in APPPATH\Views\funcionarios\exibir.php on line 35.
+ 1 APPPATH\Views\funcionarios\exibir.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cliente', 'APPPATH\\Views\\funcionarios\\exibir.php', 35)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\funcionarios\\exibir.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('funcionarios/exibir', [], true)
+ 5 APPPATH\Controllers\Funcionario.php(94): view('funcionarios/exibir', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionario->read('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:04:20 --> Undefined array key "limite_de_credito"
+in APPPATH\Views\funcionarios\exibir.php on line 62.
+ 1 APPPATH\Views\funcionarios\exibir.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "limite_de_credito"', 'APPPATH\\Views\\funcionarios\\exibir.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\funcionarios\\exibir.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('funcionarios/exibir', [], true)
+ 5 APPPATH\Controllers\Funcionario.php(94): view('funcionarios/exibir', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionario->read('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:05:15 --> Undefined array key "limite_de_credito"
+in APPPATH\Views\funcionarios\exibir.php on line 62.
+ 1 APPPATH\Views\funcionarios\exibir.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "limite_de_credito"', 'APPPATH\\Views\\funcionarios\\exibir.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\funcionarios\\exibir.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('funcionarios/exibir', [], true)
+ 5 APPPATH\Controllers\Funcionario.php(94): view('funcionarios/exibir', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionario->read('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:05:17 --> Undefined array key "limite_de_credito"
+in APPPATH\Views\funcionarios\exibir.php on line 62.
+ 1 APPPATH\Views\funcionarios\exibir.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "limite_de_credito"', 'APPPATH\\Views\\funcionarios\\exibir.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\funcionarios\\exibir.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('funcionarios/exibir', [], true)
+ 5 APPPATH\Controllers\Funcionario.php(94): view('funcionarios/exibir', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionario->read('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-28 17:05:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 17:05:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-28 17:05:45 --> Undefined array key "limite_de_credito"
+in APPPATH\Views\funcionarios\exibir.php on line 62.
+ 1 APPPATH\Views\funcionarios\exibir.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "limite_de_credito"', 'APPPATH\\Views\\funcionarios\\exibir.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\funcionarios\\exibir.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('funcionarios/exibir', [], true)
+ 5 APPPATH\Controllers\Funcionario.php(94): view('funcionarios/exibir', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionario->read('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-28 17:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 17:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 17:10:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 17:10:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 17:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 17:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 17:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

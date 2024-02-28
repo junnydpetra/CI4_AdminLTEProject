@@ -34,18 +34,18 @@ class Funcionario extends BaseController
     public function store()
     {
         $dados = $this->request->getVar();
-
-        if (isset($dados['cliente_id'])):
+        
+        if (isset($dados['funcionario_id'])):
 
             $this->funcionario_model
-                 ->where('id', $dados['cliente_id'])
+                 ->where('id', $dados['funcionario_id'])
                  ->set($dados)
                  ->update();
 
             $session = session();
             $session->setFlashdata('alert', 'success_update');
 
-            return redirect()->to("clientes");
+            return redirect()->to("funcionarios");
 
         endif;
 
@@ -54,6 +54,44 @@ class Funcionario extends BaseController
         $session = session();
         $session->setFlashdata('alert', 'success_create');
 
-        return redirect()->to('/clientes');
+        return redirect()->to('/funcionarios');
+    }
+    
+    public function edit($funcionario_id)
+    {        
+        $funcionario = $this->funcionario_model
+                        ->where('id', $funcionario_id)
+                        ->first();
+
+        $data['funcionario'] = $funcionario;
+
+        echo view('templates/header');
+        echo view('funcionarios/editar', $data);
+        echo view('templates/footer');
+    }
+    
+    public function delete($funcionario_id)
+    {
+        $this->funcionario_model
+             ->where('id', $funcionario_id)
+             ->delete();
+
+        $session = session();
+        $session->setFlashdata('alert', 'success_delete');
+
+        return redirect()->to('funcionarios');
+    }
+    
+    public function read($funcionario_id)
+    {
+        $funcionario = $this->funcionario_model
+                         ->where('id', $funcionario_id)
+                         ->first();
+
+        $data['funcionario'] = $funcionario;
+        
+        echo view('templates/header');
+        echo view('funcionarios/exibir', $data);
+        echo view('templates/footer');
     }
 }

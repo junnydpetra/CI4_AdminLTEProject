@@ -95,13 +95,13 @@
                                 <tr>
                                     <th style="width: 10px" class="align-middle">Registro</th>
                                     <th class="align-middle text-center">Nome</th>
-                                    <th class="align-middle text-center">Nascimento</th>
+                                    <th class="align-middle text-center">Cargo</th>
                                     <th class="align-middle text-center">RG</th>
                                     <th class="align-middle text-center">CPF</th>
                                     <th class="align-middle text-center">Telefone</th>
+                                    <th class="align-middle text-center">Nascimento</th>
                                     <th class="align-middle text-center">Endereço</th>
                                     <!-- <th class="align-middle text-center">Contratação</th> -->
-                                    <th class="align-middle text-center">Cargo</th>
                                     <th class="align-middle text-center">Salário</th>
                                     <!-- <th class="align-middle text-center">Data do Pagamento</th> -->
                                     <th class="align-middle text-center" class="text-center">Opções</th>
@@ -113,13 +113,13 @@
                                       <tr>
                                           <td class="text-center"><?= $funcionario['id'] ?></td>
                                           <td><?= $funcionario['nome'] ?></td>
-                                          <td><?= date('d/m/Y', strtotime($funcionario['data_de_nascimento'])) ?></td>
+                                          <td><?= $funcionario['cargo'] ?></td>
                                           <td><?= $funcionario['rg'] ?></td>
                                           <td><?= substr($funcionario['cpf'], 0, 3) ?>.<?= substr($funcionario['cpf'], 3, 3) ?>.<?= substr($funcionario['cpf'], 6, 3) ?>-<?= substr($funcionario['cpf'], 9, 2) ?></td>
                                           <td><?= $funcionario['telefone'] ?></td>
+                                          <td><?= date('d/m/Y', strtotime($funcionario['data_de_nascimento'])) ?></td>
                                           <td><?= $funcionario['endereco'] ?></td>
                                           <!-- <td><?= $funcionario['data_de_contratacao'] ?></td> -->
-                                          <td><?= $funcionario['cargo'] ?></td>
                                           <td><?= number_format($funcionario['salario'], 2, ',', '.') ?></td>
                                           <!-- <td><?= $funcionario['dia_do_pagamento'] ?></td> -->
                                           <td class="text-center">
