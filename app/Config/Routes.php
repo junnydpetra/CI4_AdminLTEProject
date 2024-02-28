@@ -2,6 +2,8 @@
 
 namespace Config;
 
+use App\Controllers\Funcionario;
+
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
@@ -29,16 +31,27 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+/* Clientes */
 $routes->get('/', 'Home::index');
 $routes->get('/inicio', 'Inicio::index');
 $routes->get('/clientes', 'Cliente::index');
 $routes->get('/clientes/new', 'Cliente::new');
 $routes->get('/clientes/edit/(:num)', 'Cliente::edit/$1');
 $routes->get('/clientes/read/(:num)', 'Cliente::read/$1');
-$routes->get('/funcionarios', 'Funcionarios::index');
 
 $routes->post('/clientes/store', 'Cliente::store');
-$routes->add('clientes/delete/(:num)', 'Cliente::delete/$1', ['as' => 'delete_cliente']);
+$routes->add('/clientes/delete/(:num)', 'Cliente::delete/$1', ['as' => 'delete_cliente']);
+
+/* Funcionários */
+$routes->get('/funcionarios', 'Funcionario::index');
+$routes->get('/funcionario', 'Funcionario::index');
+$routes->get('/funcionarios/new', 'Funcionario::new');
+$routes->get('/funcionarios/edit/(:num)', 'Funcionario::edit/$1');
+$routes->get('/funcionarios/read/(:num)', 'Funcionario::read/$1');
+
+$routes->post('/funcionarios/store', 'Funcionario::store');
+$routes->add('funcionarios/delete/(:num)', 'Funcionario::delete/$1', ['as' => 'delete_funcionario']);
 
 /*
  * --------------------------------------------------------------------

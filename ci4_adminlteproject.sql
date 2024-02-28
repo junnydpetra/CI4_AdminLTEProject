@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 27/02/2024 às 12:02
+-- Tempo de geração: 27/02/2024 às 21:14
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -44,7 +44,30 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id`, `nome`, `data_de_nascimento`, `telefone`, `endereco`, `limite_de_credito`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(2, 'Junnyldo Menezes Costa', '1993-08-02', '(41) 99847-5685', 'Rua Mário Colombo, 94, Alto Boqueirão - Curitiba/PR', 80000, '2024-02-26 18:55:21', '2024-02-26 18:55:21', '0000-00-00 00:00:00');
+(9, 'Junnyldo Menezes Costa', '1993-08-02', '(41) 998475685', 'Rua Mário Colombo, 94, Alto Boqueirão, Casa 2 - Curitiba/PR', 100, '2024-02-27 17:56:39', '2024-02-27 19:11:59', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `funcionarios`
+--
+
+CREATE TABLE `funcionarios` (
+  `id` int(9) NOT NULL,
+  `nome` varchar(128) NOT NULL,
+  `data_de_nascimento` date NOT NULL,
+  `rg` varchar(32) NOT NULL,
+  `cpf` varchar(14) NOT NULL,
+  `telefone` varchar(32) NOT NULL,
+  `endereco` varchar(128) NOT NULL,
+  `data_de_contratacao` date NOT NULL,
+  `cargo` varchar(128) NOT NULL,
+  `salario` double NOT NULL,
+  `dia_do_pagamento` int(11) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `deleted_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -67,7 +90,8 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`, `batch`) VALUES
-(1, '2024-02-23-144059', 'App\\Database\\Migrations\\Clientes', 'default', 'App', 1708699774, 1);
+(1, '2024-02-23-144059', 'App\\Database\\Migrations\\Clientes', 'default', 'App', 1708699774, 1),
+(2, '2024-02-27-191755', 'App\\Database\\Migrations\\Funcionarios', 'default', 'App', 1709062850, 2);
 
 --
 -- Índices para tabelas despejadas
@@ -77,6 +101,12 @@ INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`
 -- Índices de tabela `clientes`
 --
 ALTER TABLE `clientes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices de tabela `funcionarios`
+--
+ALTER TABLE `funcionarios`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -93,13 +123,19 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de tabela `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT de tabela `funcionarios`
+--
+ALTER TABLE `funcionarios`
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
