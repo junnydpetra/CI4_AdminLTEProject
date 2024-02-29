@@ -26,7 +26,7 @@ class Login extends BaseController
         
         $usuario = $this->login_model
                         ->where('usuario', $dados['usuario'])
-                        ->where('senha', $dados['senha'])
+                        ->where('senha', md5($dados['senha']))
                         ->first();
 
         $session = session();
@@ -62,20 +62,20 @@ class Login extends BaseController
     public function store()
     {
         $dados = $this->request->getVar();
-        
+        // dd(md5($dados['senha_atual']));
         $usuario = $this->login_model
                         ->where('id', 1)
                         ->first();
         
         $session = session();
         
-        if($dados['senha_atual'] == $usuario['senha']):
+        if(md5($dados['senha_atual']) == $usuario['senha']):
 
             if($dados['nova_senha'] == $dados['nova_senha_confirm']):
         
                 $this->login_model
                     ->where('id', 1)
-                    ->set('senha', $dados['nova_senha'])
+                    ->set('senha', md5($dados['nova_senha']))
                     ->update();
 
                 $session->setFlashdata('alert', 'change_password_success');

@@ -23,7 +23,7 @@ class Logins extends Migration
             
             'senha'               => [
                 'type'           => 'VARCHAR',
-                'constraint'     => 30,
+                'constraint'     => 150,
             ],
             
             'primeiro_nome'               => [

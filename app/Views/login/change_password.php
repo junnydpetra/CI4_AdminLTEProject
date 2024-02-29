@@ -56,7 +56,7 @@
                             <div class="row">
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="">Senhaa Atual</label>
+                                        <label for="">Senha Atual</label>
                                         <input type="text" class="form-control" placeholder="Informe a senha atual" name="senha_atual" required>
                                     </div>
                                 </div>
