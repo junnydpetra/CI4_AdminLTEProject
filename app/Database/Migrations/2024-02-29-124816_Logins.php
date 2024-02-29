@@ -18,7 +18,7 @@ class Logins extends Migration
             
             'usuario'               => [
                 'type'           => 'VARCHAR',
-                'constraint'     => 15,
+                'constraint'     => 50,
             ],
             
             'senha'               => [
@@ -28,7 +28,7 @@ class Logins extends Migration
             
             'primeiro_nome'               => [
                 'type'           => 'VARCHAR',
-                'constraint'     => 15,
+                'constraint'     => 50,
             ],
             
             'created_at'=> [

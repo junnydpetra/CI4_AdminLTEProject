@@ -1,10 +1,18 @@
+<?php
+
+  $session = session();
+  
+  $primeiro_nome = $session->get('primeiro_nome');
+
+?>
+
 <div class="content-wrapper">
     
   <div class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Página inicial</h1>
+          <h1 class="m-0">Olá, <?= $primeiro_nome ?>!</h1>
         </div>
       </div>
     </div>

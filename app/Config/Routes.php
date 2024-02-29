@@ -63,26 +63,12 @@ $routes->add('produtos/delete/(:num)', 'Produto::delete/$1', ['as' => 'delete_pr
 
 /* Logins */
 $routes->get('/login', 'Login::index');
-// $routes->get('/produtos/new', 'Produto::new');
-// $routes->get('/produtos/edit/(:num)', 'Produto::edit/$1');
-// $routes->get('/produtos/read/(:num)', 'Produto::read/$1');
+$routes->get('/logout', 'Login::logout');
+$routes->get('/login/change_password', 'Login::changePassword');
 
-// $routes->post('/produtos/store', 'Produto::store');
-// $routes->add('produtos/delete/(:num)', 'Produto::delete/$1', ['as' => 'delete_produto']);
+$routes->post('/login/store', 'Login::store');
+$routes->post('/login/authenticate', 'Login::authenticate');
 
-/*
- * --------------------------------------------------------------------
- * Additional Routing
- * --------------------------------------------------------------------
- *
- * There will often be times that you need additional routing and you
- * need it to be able to override any defaults in this file. Environment
- * based routes is one such time. require() additional route files here
- * to make that happen.
- *
- * You will have access to the $routes object within that file without
- * needing to reload it.
- */
 if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }

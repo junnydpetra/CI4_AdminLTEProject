@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="<?= base_url('theme/dist/img/AdminLTELogo.png') ?> " alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">aCodeTech</span>
+      <span class="brand-text font-weight-light">aCode Tech</span>
     </a>
 
     <!-- Sidebar -->
@@ -42,7 +42,7 @@
           </li>
           <li class="nav-item">
             <a href="<?= base_url('funcionarios'); ?>" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
+              <i class="nav-icon fas fa-user-tie"></i>
               <p>
                 Registros de Funcionários
               </p>
@@ -53,6 +53,14 @@
               <i class="nav-icon fas fa-boxes"></i>
               <p>
                 Registros de Produtos
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?= base_url('login/change_password'); ?>" class="nav-link">
+              <i class="nav-icon fas fa-user-lock"></i>
+              <p>
+                Alterar Senha
               </p>
             </a>
           </li>
