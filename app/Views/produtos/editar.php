@@ -27,68 +27,78 @@
                     
                     <form action="/produtos/store" method="post">
                         
-                    <div class="card-body">
+                        <div class="card-body">
                             
                             <div class="row">
-                                <div class="col-lg-3">
+                                <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="">Nome</label>
-                                        <input type="text" class="form-control" placeholder="Informe o nome" name="nome" required>
+                                        <input type="text" class="form-control" placeholder="Informe o nome" name="nome" value="<?= $produto['nome'] ?>" required>
                                     </div>
                                 </div>
                                 
-                                <div class="col-lg-3">
+                                <div class="col-lg-8">
                                     <div class="form-group">
                                         <label for="descricao">Descrição</label>
-                                        <input type="text" class="form-control" placeholder="Descreva o produto" name="descricao" required>
+                                        <input type="text" class="form-control" placeholder="Descreva o produto" name="descricao" value="<?= $produto['descricao'] ?>" required>
                                     </div>
                                 </div>
+                            </div>
+                            
+                            <div class="row">
+
                             
                                 <div class="col-lg-3">
                                     <div class="form-group">
                                         <label for="quantidade">Quantidade</label>
-                                        <input type="date" class="form-control" placeholder="Informe sua data de nascimento" name="quantidade" required>
+                                        <input type="int" class="form-control" placeholder="Informe a quantidade" name="quantidade" value="<?= $produto['quantidade'] ?>" required>
                                     </div>
                                 </div>
                                                         
                                 <div class="col-lg-3">
                                     <div class="form-group">
                                         <label for="quantidade_minima">Quantidade Mínima</label>
-                                        <input type="text" class="form-control" placeholder="Informe a quantidade mínima" name="quantidade_minima" required>
+                                        <input type="int" class="form-control" placeholder="Informe a quantidade mínima" name="quantidade_minima" value="<?= $produto['quantidade_minima'] ?>" required>
                                     </div>
                                 </div>
-                            </div>
                             
-                            <div class="row">
-                                <div class="form-group col-lg-1">
+                                <div class="form-group col-lg-3">
                                     <label for="valor_de_compra">Valor de Compra</label>
-                                    <input type="text" class="form-control" placeholder="Informe o valor da compra" name="valor_de_compra" required>
+                                    <input type="text" class="form-control" placeholder="Informe o valor da compra" name="valor_de_compra" value="<?= $produto['valor_de_compra'] ?>" required>
                                 </div>
                                 
-                                <div class="form-group col-lg-1">
+                                <div class="form-group col-lg-3">
                                     <label for="valor_de_venda">Valor de Venda</label>
-                                    <input type="text" class="form-control" placeholder="Informe o valor da venda" name="valor_de_venda" required>
+                                    <input type="text" class="form-control" placeholder="Informe o valor da venda" name="valor_de_venda" value="<?= $produto['valor_de_venda'] ?>" required>
                                 </div>
-                                
-                                <div class="col-lg-2">
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-lg-3">
                                     <label for="margem_de_lucro">Margem de Lucro (%)</label>
-                                    <input type="double" class="form-control" placeholder="Margem de lucro em %" name="margem_de_lucro" required>
+                                    <input type="double" class="form-control" placeholder="Margem de lucro em %" name="margem_de_lucro" value="<?= $produto['margem_de_lucro'] ?>" required>
                                 </div>
                                 
-                                <div class="col-lg-2">
+                                <div class="col-lg-3">
                                     <label for="validade">Validade</label>
-                                    <input type="date" class="form-control" placeholder="Informe a validade" name="validade" required>
+                                    <input type="date" class="form-control" placeholder="Informe a validade" name="validade" value="<?= $produto['validade'] ?>" required>
                                 </div>
                             </div>
 
                         </div>
-                        
+
+                        <input type="hidden" name="produto_id" value="<?= $produto['id'] ?>">
                         <div class="card-footer border-top border-dark">
                             <div class="row justify-content-between">
-                            <button type="submit" class="btn btn-primary" title="salvar"><i class="fas fa-save"></i></button>
+                                <button type="submit" class="btn btn-primary" title="salvar"><i class="fas fa-save"></i></button>
                                 <a href="javascript:history.back()" class="btn btn-danger" title="voltar"><i class="fas fa-arrow-left"></i></a>
                             </div>
                         </div>
+                        
+                    </form>
+
                 </div>
             </div>
         </div>

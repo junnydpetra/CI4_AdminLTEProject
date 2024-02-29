@@ -33,7 +33,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?php echo base_url('/inicio')?>">Home</a></li>
-              <li class="breadcrumb-item active">Registro de produtos</li>
+              <li class="breadcrumb-item active">Produtos</li>
             </ol>
           </div>
         </div>
@@ -105,28 +105,18 @@
                                     <th class="align-middle text-center">Descrição</th>
                                     <th class="align-middle text-center">Quantidade</th>
                                     <th class="align-middle text-center">Quantidade Mínima</th>
-                                    <th class="align-middle text-center">Valor de Compra</th>
-                                    <th class="align-middle text-center">Valor de Venda</th>
-                                    <th class="align-middle text-center">Nascimento</th>
-                                    <th class="align-middle text-center">Margem de Lucro</th>
-                                    <th class="align-middle text-center">Validade</th>
                                     <th class="align-middle text-center" class="text-center">Opções</th>
                                 </tr>
                             </thead>
                             <tbody>
                               <?php if(!empty($produtos)): ?>
                                   <?php foreach ($produtos as $key => $produto): ?>
-                                      <tr>
+                                      <tr class="text-center">
                                           <td class="text-center"><?= $produto['id'] ?></td>
                                           <td><?= $produto['nome'] ?></td>
-                                          <!-- <td><?= $produto['descricao'] ?></td> -->
+                                          <td><?= $produto['descricao'] ?></td>
                                           <td><?= $produto['quantidade'] ?></td>
                                           <td><?= $produto['quantidade_minima'] ?></td>
-                                          <td><?= number_format($produto['valor_de_compra'], 2, ',', '.') ?></td>
-                                          <td><?= number_format($produto['valor_de_venda'], 2, ',', '.') ?></td>
-                                          <td><?= $produto['margem_de_lucro'] ?></td>
-                                          <td><?= date('d/m/Y', strtotime($produto['validade'])) ?></td>
-                                          <td><?= $produto['endereco'] ?></td>
                                           <td class="text-center">
                                             <a href="<?= base_url("produtos/read/{$produto['id']}") ?>" class="btn-sm btn-primary" title="exibir registro"><i class="fas fa-eye"></i></a>
                                             <a href="<?= base_url("produtos/edit/{$produto['id']}") ?>" class="btn-sm btn-warning" title="editar registro"><i class="fas fa-pen"></i></a>
@@ -141,15 +131,7 @@
                         </table>
                     </div>
 
-                    <div class="card-footer clearfix">
-                        <ul class="pagination pagination-sm m-0 float-right">
-                            <li class="page-item"><a class="page-link" href="#">«</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">»</a></li>
-                        </ul>
-                    </div>
+                    <div class="card-footer clearfix"></div>
                 </div>
                 
             </div>

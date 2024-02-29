@@ -51,14 +51,14 @@
                                 <div class="col-lg-3">
                                     <div class="form-group">
                                         <label for="quantidade">Quantidade</label>
-                                        <input type="date" class="form-control" placeholder="Informe sua data de nascimento" name="quantidade" required>
+                                        <input type="int" class="form-control" placeholder="Informe a quantidade" name="quantidade" required>
                                     </div>
                                 </div>
                                                         
                                 <div class="col-lg-3">
                                     <div class="form-group">
                                         <label for="quantidade_minima">Quantidade Mínima</label>
-                                        <input type="text" class="form-control" placeholder="Informe a quantidade mínima" name="quantidade_minima" required>
+                                        <input type="int" class="form-control" placeholder="Informe a quantidade mínima" name="quantidade_minima" required>
                                     </div>
                                 </div>
                             
