@@ -63,12 +63,12 @@
                             
                                 <div class="form-group col-lg-3">
                                     <label for="valor_de_compra">Valor de Compra</label>
-                                    <input type="text" class="form-control" placeholder="Informe o valor da compra" name="valor_de_compra" value="<?= $produto['valor_de_compra'] ?>" disabled>
+                                    <input type="text" class="form-control" placeholder="Informe o valor da compra" name="valor_de_compra" value="<?= number_format($produto['valor_de_compra'], 2, ',', '.') ?>" disabled>
                                 </div>
-                                
+
                                 <div class="form-group col-lg-3">
                                     <label for="valor_de_venda">Valor de Venda</label>
-                                    <input type="text" class="form-control" placeholder="Informe o valor da venda" name="valor_de_venda" value="<?= $produto['valor_de_venda'] ?>" disabled>
+                                    <input type="text" class="form-control" placeholder="Informe o valor da venda" name="valor_de_venda" value="<?= number_format($produto['valor_de_venda'], 2, ',', '.') ?>" disabled>
                                 </div>
 
                             </div>

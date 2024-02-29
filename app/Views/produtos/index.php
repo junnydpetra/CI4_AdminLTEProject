@@ -83,7 +83,7 @@
                             <div class="row">
                                 <h3 class="card-title col-lg-1 align-middle font-weight-bold">Registros</h3>
                                 <a href="<?= base_url('/produtos/new') ?>" class="col-lg-1 offset-lg-10 btn btn-sm btn-success border border-dark p-1" title="Adicionar produto">
-                                  <i class="fas fa-user-plus"></i>
+                                  <i class="fas fa-box"></i>
                                 </a>
                             </div>  
 

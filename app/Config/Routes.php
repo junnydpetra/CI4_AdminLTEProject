@@ -61,6 +61,15 @@ $routes->get('/produtos/read/(:num)', 'Produto::read/$1');
 $routes->post('/produtos/store', 'Produto::store');
 $routes->add('produtos/delete/(:num)', 'Produto::delete/$1', ['as' => 'delete_produto']);
 
+/* Logins */
+$routes->get('/login', 'Login::index');
+// $routes->get('/produtos/new', 'Produto::new');
+// $routes->get('/produtos/edit/(:num)', 'Produto::edit/$1');
+// $routes->get('/produtos/read/(:num)', 'Produto::read/$1');
+
+// $routes->post('/produtos/store', 'Produto::store');
+// $routes->add('produtos/delete/(:num)', 'Produto::delete/$1', ['as' => 'delete_produto']);
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
