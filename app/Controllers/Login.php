@@ -69,7 +69,7 @@ class Login extends BaseController
     public function store()
     {
         $dados = $this->request->getVar();
-        
+        // dd(md5($dados['senha_atual']));
         $usuario = $this->login_model
                         ->where('id', 1)
                         ->first();

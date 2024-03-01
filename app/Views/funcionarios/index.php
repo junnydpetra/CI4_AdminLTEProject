@@ -100,10 +100,8 @@
                                     <th class="align-middle text-center">CPF</th>
                                     <th class="align-middle text-center">Telefone</th>
                                     <th class="align-middle text-center">Nascimento</th>
-                                    <th class="align-middle text-center">Endereço</th>
-                                    <!-- <th class="align-middle text-center">Contratação</th> -->
-                                    <th class="align-middle text-center">Salário</th>
-                                    <!-- <th class="align-middle text-center">Data do Pagamento</th> -->
+                                    <th class="align-middle text-center">Endereço</th>                                    
+                                    <th class="align-middle text-center">Salário</th>                                    
                                     <th class="align-middle text-center" class="text-center">Opções</th>
                                 </tr>
                             </thead>
@@ -118,10 +116,8 @@
                                           <td><?= substr($funcionario['cpf'], 0, 3) ?>.<?= substr($funcionario['cpf'], 3, 3) ?>.<?= substr($funcionario['cpf'], 6, 3) ?>-<?= substr($funcionario['cpf'], 9, 2) ?></td>
                                           <td><?= $funcionario['telefone'] ?></td>
                                           <td><?= date('d/m/Y', strtotime($funcionario['data_de_nascimento'])) ?></td>
-                                          <td><?= $funcionario['endereco'] ?></td>
-                                          <!-- <td><?= $funcionario['data_de_contratacao'] ?></td> -->
-                                          <td><?= number_format($funcionario['salario'], 2, ',', '.') ?></td>
-                                          <!-- <td><?= $funcionario['dia_do_pagamento'] ?></td> -->
+                                          <td><?= $funcionario['endereco'] ?></td>                                          
+                                          <td><?= number_format($funcionario['salario'], 2, ',', '.') ?></td>                                          
                                           <td class="text-center">
                                             <a href="<?= base_url("funcionarios/read/{$funcionario['id']}") ?>" class="btn-sm btn-primary" title="exibir registro"><i class="fas fa-eye"></i></a>
                                             <a href="<?= base_url("funcionarios/edit/{$funcionario['id']}") ?>" class="btn-sm btn-warning" title="editar registro"><i class="fas fa-pen"></i></a>
