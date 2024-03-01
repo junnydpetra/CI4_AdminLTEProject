@@ -31,18 +31,22 @@ class Login extends BaseController
 
         $session = session();
 
-        if (!empty($usuario)):
-            
+        if (!empty($usuario)) {
             $session->set('primeiro_nome', $usuario['primeiro_nome']);
-            $session->setFlashdata('alert', 'login_success');
-            
+            $session->setFlashdata('alert', [
+                'type' => 'success',
+                'message' => 'Login bem-sucedido!'
+            ]);
             return redirect()->to('/inicio');
-        endif;
-        
-        $session->setFlashdata('alert', 'login_error');
-        
-        return redirect()->to('/login');
+        } else {
+            $session->setFlashdata('alert', [
+                'type' => 'danger',
+                'message' => 'Usuário ou senha incorretos!'
+            ]);
+            return redirect()->to('/login');
+        }
     }
+
 
     
     
@@ -97,4 +101,5 @@ class Login extends BaseController
     
         return redirect()->to('/login/change_password');
     }
+
 }

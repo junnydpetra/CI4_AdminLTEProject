@@ -18,15 +18,24 @@ class AuthFilter implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         $session = session();
-
+    
         // Redirect to login page if user is not logged in
         if (!$session->has('primeiro_nome') && $request->uri->getSegment(1) !== 'login') {
+            $alert = [
+                'type' => 'warning',
+                'message' => 'Você precisa estar logado para acessar esta página.'
+            ];
+            $session->setFlashdata('alert', $alert);
             return redirect()->to('/login');
         }
+    
         if ($session->has('primeiro_nome') && $request->uri->getSegment(1) == 'login') {
             return redirect()->to('/inicio');
         }
     }
+
+
+    
 
     /**
      * Método que será executado após a requisição ser processada.
