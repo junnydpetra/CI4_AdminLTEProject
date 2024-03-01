@@ -64,10 +64,14 @@ $routes->add('produtos/delete/(:num)', 'Produto::delete/$1', ['as' => 'delete_pr
 /* Logins */
 $routes->get('/login', 'Login::index');
 $routes->get('/logout', 'Login::logout');
-$routes->get('/login/change_password', 'Login::changePassword');
+$routes->get('/login/teste', 'Login::changePassword');
 
 $routes->post('/login/store', 'Login::store');
 $routes->post('/login/authenticate', 'Login::authenticate');
+
+$routes->get('/login/qualquer', 'Login::qualquer');
+
+$routes->get('/change_password', 'Login::changePassword');
 
 if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';

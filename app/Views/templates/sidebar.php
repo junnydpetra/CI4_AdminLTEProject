@@ -57,7 +57,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('login/change_password'); ?>" class="nav-link">
+            <a href="<?= base_url('change_password'); ?>" class="nav-link">
               <i class="nav-icon fas fa-user-lock"></i>
               <p>
                 Alterar Senha
