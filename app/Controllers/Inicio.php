@@ -13,7 +13,8 @@ class Inicio extends BaseController
     private $funcionario_model;
     private $produtio_model;
 
-    function __construct() {
+    function __construct() 
+    {
         $this->cliente_model     = new ClienteModel();
         $this->funcionario_model = new FuncionarioModel();
         $this->produtio_model    = new ProdutoModel();

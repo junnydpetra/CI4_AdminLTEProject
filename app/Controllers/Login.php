@@ -45,10 +45,7 @@ class Login extends BaseController
             ]);
             return redirect()->to('/login');
         }
-    }
-
-
-    
+    }   
     
     public function logout()
     {
@@ -63,11 +60,6 @@ class Login extends BaseController
         echo view('templates/header');
         echo view('login/change_password');
         echo view('templates/footer');
-    }
-    
-    public function qualquer()
-    {
-        return 'teste!';
     }
 
     public function store()
